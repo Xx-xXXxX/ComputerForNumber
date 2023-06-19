@@ -15,7 +15,7 @@ namespace ComputerForNumber
 	{
 		protected override void OnClosed(EventArgs e)
 		{
-			
+
 		}
 		public Form1()
 		{

@@ -243,8 +243,8 @@ namespace ComputerForNumber
 			foreach (Match i in matches) {
 				switch (i.Groups[1].Value) {
 					case "BitLength":
-						if (!short.TryParse(i.Groups[2].Value, out BL)) throw new Exception($"{i} 中 {i.Groups[2].Value} 不是数字");
-						if (BL > 32) throw new Exception($"BitLength{BL}不能大于32");
+						if (!short.TryParse(i.Groups[2].Value, out BL)) throw new Exception($"{i}  {i.Groups[2].Value} isn't a number");
+						if (BL > 32) throw new Exception($"BitLength{BL} needs <32");
 						break;
 					//case "Count":
 					//	if (!int.TryParse(i.Groups[2].Value, out C)) return false;
@@ -258,7 +258,7 @@ namespace ComputerForNumber
 							if (!int.TryParse(MatchIndexs.Groups[1].Value, out index))
 							{
 								if (MatchIndexs.Groups[1].Value.Length == 0) index = LastIndex + 1;
-								else throw new Exception($"{MatchIndexs} 中 {MatchIndexs.Groups[1]} 不是数字");
+								else throw new Exception($"{MatchIndexs} 中 {MatchIndexs.Groups[1]} isn't a number");
 							}
 							string namesStr = MatchIndexs.Groups[2].Value;
 							var c = Regex.Matches(namesStr, @"(\w+)");
@@ -304,7 +304,7 @@ namespace ComputerForNumber
 						break;
 				}
 			}
-			if (BL == -2) throw new Exception("BitLength未设置");
+			if (BL == -2) throw new Exception("BitLength isn't setted");
 			CFN.Reset(BL);
 			int TryGetValue(string ValueStr) {
 				if (!int.TryParse(ValueStr, out int Index))

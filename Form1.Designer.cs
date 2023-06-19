@@ -44,7 +44,7 @@
 			menuStrip1.Items.AddRange(new ToolStripItem[] { 视图ToolStripMenuItem1 });
 			menuStrip1.Location = new Point(0, 0);
 			menuStrip1.Name = "menuStrip1";
-			menuStrip1.Size = new Size(424, 39);
+			menuStrip1.Size = new Size(424, 42);
 			menuStrip1.TabIndex = 1;
 			menuStrip1.Text = "menuStrip1";
 			// 
@@ -52,28 +52,28 @@
 			// 
 			视图ToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { 数字ToolStripMenuItem1, 运行ToolStripMenuItem, 字符ToolStripMenuItem });
 			视图ToolStripMenuItem1.Name = "视图ToolStripMenuItem1";
-			视图ToolStripMenuItem1.Size = new Size(82, 35);
+			视图ToolStripMenuItem1.Size = new Size(82, 38);
 			视图ToolStripMenuItem1.Text = "视图";
 			// 
 			// 数字ToolStripMenuItem1
 			// 
 			数字ToolStripMenuItem1.Name = "数字ToolStripMenuItem1";
 			数字ToolStripMenuItem1.Size = new Size(359, 44);
-			数字ToolStripMenuItem1.Text = "数字";
+			数字ToolStripMenuItem1.Text = "NumberView";
 			数字ToolStripMenuItem1.Click += 数字ToolStripMenuItem1_Click;
 			// 
 			// 运行ToolStripMenuItem
 			// 
 			运行ToolStripMenuItem.Name = "运行ToolStripMenuItem";
 			运行ToolStripMenuItem.Size = new Size(359, 44);
-			运行ToolStripMenuItem.Text = "运行";
+			运行ToolStripMenuItem.Text = "Run";
 			运行ToolStripMenuItem.Click += 运行ToolStripMenuItem_Click;
 			// 
 			// 字符ToolStripMenuItem
 			// 
 			字符ToolStripMenuItem.Name = "字符ToolStripMenuItem";
 			字符ToolStripMenuItem.Size = new Size(359, 44);
-			字符ToolStripMenuItem.Text = "字符串传输";
+			字符ToolStripMenuItem.Text = "String";
 			字符ToolStripMenuItem.Click += 字符ToolStripMenuItem_Click;
 			// 
 			// openFileDialog1
