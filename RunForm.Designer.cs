@@ -49,7 +49,7 @@
 			ButtonRunOnce.Name = "ButtonRunOnce";
 			ButtonRunOnce.Size = new Size(150, 46);
 			ButtonRunOnce.TabIndex = 0;
-			ButtonRunOnce.Text = "运行一次";
+			ButtonRunOnce.Text = "Run Once";
 			ButtonRunOnce.UseVisualStyleBackColor = true;
 			ButtonRunOnce.Click += ButtonRunOnce_Click;
 			// 
@@ -58,9 +58,9 @@
 			CheckBoxCRun.AutoSize = true;
 			CheckBoxCRun.Location = new Point(168, 19);
 			CheckBoxCRun.Name = "CheckBoxCRun";
-			CheckBoxCRun.Size = new Size(142, 35);
+			CheckBoxCRun.Size = new Size(140, 35);
 			CheckBoxCRun.TabIndex = 1;
-			CheckBoxCRun.Text = "持续运行";
+			CheckBoxCRun.Text = "Run Still";
 			CheckBoxCRun.UseVisualStyleBackColor = true;
 			CheckBoxCRun.CheckedChanged += CheckBoxCRun_CheckedChanged;
 			// 

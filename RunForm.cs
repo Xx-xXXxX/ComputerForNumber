@@ -24,7 +24,7 @@ namespace ComputerForNumber
 
 		private void RunCFN(object? sender, EventArgs e)
 		{
-			Program.computerForNumber!.ComputerForNumberFn();
+			if (Program.computerForNumber!.ComputerForNumberFn()) CheckBoxCRun.Checked = false;
 			label1.TryInvoke(() => { label1.Text = RunCount.ToString(); });
 		}
 

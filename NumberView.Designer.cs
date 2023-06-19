@@ -94,7 +94,7 @@
 			// 
 			ViewList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 			ViewList.AutoScroll = true;
-			ViewList.BackColor = SystemColors.ControlDarkDark;
+			ViewList.BackColor = SystemColors.Control;
 			ViewList.Location = new Point(12, 3);
 			ViewList.Name = "ViewList";
 			ViewList.Size = new Size(1076, 749);
