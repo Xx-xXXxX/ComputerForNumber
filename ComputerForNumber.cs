@@ -234,7 +234,7 @@ namespace ComputerForNumber
 			short BL=-2;
 			//int C=-2;
 			int LastIndex=-2;
-			var a = Regex.Matches(s, @"\\(.*?):(.*?);");
+			var a = Regex.Matches(s, @"<(.*?):(.*?)>");
 			List<Match> matches = a.Cast<Match>().ToList();
 			//matches.Add(Regex.Match(s, @"(.*?):(.*?)$"));
 			Dictionary<uint,string> IndexToValue = new();
@@ -258,7 +258,7 @@ namespace ComputerForNumber
 							if (!int.TryParse(MatchIndexs.Groups[1].Value, out index))
 							{
 								if (MatchIndexs.Groups[1].Value.Length == 0) index = LastIndex + 1;
-								else throw new Exception($"{MatchIndexs} 中 {MatchIndexs.Groups[1]} isn't a number");
+								else throw new Exception($"{MatchIndexs} in {MatchIndexs.Groups[1]} isn't a number");
 							}
 							string namesStr = MatchIndexs.Groups[2].Value;
 							var c = Regex.Matches(namesStr, @"(\w+)");
@@ -316,7 +316,7 @@ namespace ComputerForNumber
 						if (!NameToIndex.TryGetValue(ValueStr, out uint uIndex))
 						{
 
-							throw new Exception($"未知的值{ValueStr}");
+							throw new Exception($"unknow value {ValueStr}");
 						}
 						else Index=uIndex.USIToSI(BL);
 					}
@@ -336,7 +336,7 @@ namespace ComputerForNumber
 					else {
 						if (!NameToIndex.TryGetValue(ValueStr, out uint uvalue)) {
 							var matchGoto = Regex.Match(ValueStr,@"(\w+)=>(\w+)");
-							if (!matchGoto.Success) throw new Exception($"未知的值{ValueStr}");
+							if (!matchGoto.Success) throw new Exception($"unknow value {ValueStr}");
 							int FromIndex = TryGetValue(matchGoto.Groups[1].Value);
 							int ToIndex = TryGetValue(matchGoto.Groups[2].Value);
 							//ToIndex-2=FromIndex-value
